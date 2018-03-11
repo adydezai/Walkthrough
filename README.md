@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+## Significance of Cron-Jobs in Pentesting
 
-You can use the [editor on GitHub](https://github.com/adydezai/Walkthrough/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### What are Cron-Jobs and How can they help you get privileged access?
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In a pentester's perspective Cron Jobs are one of may ways you can get SYSTEM to perform a task or a set of tasks. Jobs are scheduled periodically with freedom to perform tasks daily, weekly, monthly and so on. It is a convenient way for automatic updates, creating backups and is achieved by running scripts or executing commands periodically. 
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+**Below is how a crontab entries would look like!**
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+**Example of job definition:**
+.---------------- minute (0 - 59)
+|  .------------- hour (0 - 23)
+|  |  .---------- day of month (1 - 31)
+|  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+|  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+|  |  |  |  |
+*  *  *  *  * user-name  command to be executed
 ```
+Cron Jobs can be found in **/var/spool/cron/crontabs** and should be accessible only by **root**.
+Scheduled Cron Jobs can be listed using command and what this particular job does is obvious from the below script.
+```markdown
+# crontab -l
+* * * * * cd /scripts; for f in *.py; do python "$f"; done
+```
+Let's dive in to get some shells!
+Firstly lets get nmap to scan our target machine.
+**--SC for Nmap Scan**
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/adydezai/Walkthrough/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Apparently there is a web server running, you can initiate a Nikto scan to enumerate more and meanwhile visit the site.
