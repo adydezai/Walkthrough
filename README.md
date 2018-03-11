@@ -32,7 +32,7 @@ Apparently there is a web server running, you can initiate a Nikto scan to enume
 Nikto shows there is **/dev/** directory listing, and there is much to discover. Listing has two links :
 ![directorylisting](https://user-images.githubusercontent.com/22067818/37248580-bfee2da0-2529-11e8-88ca-4062b40ac841.PNG)
 
-Have a look at **phpbash.php** file and will link the details: (https://github.com/arrexel/phpbash) read through!
+Have a look at **phpbash.php** file and will link the details: https://github.com/arrexel/phpbash read through!
 What this does is gives you a code execution capability which can also be used to drop web shells on vulnerable websites. Good to Know!
 Enumerating more into the system (LinuxPrivChecker.py or **cat /etc/passwd**), bring to you two user accounts of which **scriptmanager** (isnt that an unusual name? Hmm) interests more due to fact that it can access **/scripts** folder in **root** directory. 
 
