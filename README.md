@@ -24,4 +24,5 @@ Scheduled Cron Jobs can be listed using command and what this particular job doe
 Let's dive in to get some shells!
 Firstly lets get nmap to scan our target machine.
 ![nmapscan](https://user-images.githubusercontent.com/22067818/37248477-5fc43250-2527-11e8-9be8-1f4a62115d68.PNG)
+
 Apparently there is a web server running, you can initiate a Nikto scan to enumerate more and meanwhile visit the site.
