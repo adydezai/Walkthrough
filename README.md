@@ -35,7 +35,7 @@ Have a look at **phpbash.php** file and will link the details: (https://github.c
 What this does is gives you a code execution capability which can also be used to drop web shells on vulnerable websites. Good to Know!
 Enumerating more into the system (LinuxPrivChecker.py or **cat /etc/passwd**), bring to you two user accounts of which **scriptmanager** (isnt that an unusual name? Hmm) interests more due to fact that it can access **/scripts** folder in **root** directory. 
 
-Amazing! we can see a few scripts with **.py** extension. Thats not it, after a lot of drama to the point where frustration was so high that i left my listening port open for a long time and a downloaded reverse shell script in scripts folder, at the same time trying to mess around with some other files. I got back to my listening shell and there you go root dance with Cron-Jobs!
+Amazing! we can see a few scripts with **.py** extension. Thats not it, after a lot of drama to the point where frustration was so high that i left my listening port open for a long time and a downloaded reverse shell script in scripts folder, at the same time trying to mess around with some other files. I got back to my listening shell and there you go, root dance with Cron-Jobs!
 
 ![rootdance](https://user-images.githubusercontent.com/22067818/37248686-8bd2b0e2-252c-11e8-8f72-dcebac5c1c12.PNG)
 
